@@ -1,0 +1,27 @@
+<a href="#/items">Go Back</a>
+<div id="itemListWrapper">
+  <div class="panel panel-default" ng-init="getItem()">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{item.title}}</h3>
+    </div>
+    <ul class="list-unstyled">
+      <li class="item" 
+      style="background: white url('imgs/{{item.imgUrl}}') no-repeat">
+      <div class="item-details clearfix">
+        <h3>{{item.title}}</h3>
+        <p>{{item.price | currency:'$'}}</p>
+        <ul class="list-unstyled list-inline">
+          <li>{{item.condition}}</li>
+          <li>{{item.rating}}</li>
+          <li>{{item.category}}</li>
+        </ul>
+        <p>{{item.details}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<div class="pull-right">
+  <a href="#/items/edit/{{item._id}}">Edit</a> |  <a href="#" ng-click="removeItem(item._id)">Delete</a>
+</div>
